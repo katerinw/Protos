@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option go_package = "github.com/katerinw/Protos/proto";
+
+package dataproto;
+
+// The greeting service definition.
+service Prediccion {
+  // Sends a greeting
+  rpc addPrediccion (PrediccionRequest) returns (PrediccionReply) {}
+}
+
+// The request message containing the user's name.
+message PrediccionRequest {
+  string team1 = 1;
+  string team2 = 2;
+  string score = 3;
+  string phase = 4;
+}
+
+// The response message containing the greetings
+message PrediccionReply {
+  string team1 = 1;
+  string team2 = 2;
+  string score = 3;
+  string phase = 4;
+}
